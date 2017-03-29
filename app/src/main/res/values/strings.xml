@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Taller2Android</string>
+
+    <string name="title_activity_instrucciones">Instrucciones</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+</resources>

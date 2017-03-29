@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_interaccion"
+    android:background="@drawable/interac_img"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.giraldo.jaime.taller2android.Interaccion">
+
+    <ImageView
+        app:srcCompat="@drawable/usuario_uno_conec"
+        android:id="@+id/usuario1"
+        android:scaleType="centerInside"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:adjustViewBounds="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cropToPadding="false"
+        android:contextClickable="false"
+        android:requiresFadingEdge="none"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <ImageView
+        app:srcCompat="@drawable/usuario_dos_conec"
+        android:id="@+id/usuario2"
+        android:scaleType="centerInside"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:adjustViewBounds="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cropToPadding="false"
+        android:contextClickable="false"
+        android:requiresFadingEdge="none"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        android:layout_marginTop="110dp"
+        android:layout_alignTop="@+id/usuario1"
+        android:layout_alignEnd="@+id/usuario1" />
+
+    <ImageView
+        app:srcCompat="@drawable/usuario_tres_conec"
+        android:id="@+id/usuario3"
+        android:scaleType="centerInside"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:adjustViewBounds="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cropToPadding="false"
+        android:contextClickable="false"
+        android:requiresFadingEdge="none"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/usuario1"
+        android:layout_alignEnd="@+id/usuario2" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/add_enemies"
+        android:id="@+id/addOrb1"
+        android:background="#00000000"
+        android:elevation="0dp"
+        android:layout_marginEnd="35dp"
+        android:scaleType="centerInside"
+        android:scaleX="0.48"
+        android:scaleY="0.48"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/usuario2"
+        android:layout_alignEnd="@+id/usuario3" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/add_enemies"
+        android:id="@+id/addOrb2"
+        android:background="#00000000"
+        android:elevation="0dp"
+        android:scaleType="centerInside"
+        android:scaleX="0.48"
+        android:scaleY="0.48"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/addOrb1"
+        android:layout_marginBottom="97dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/add_enemies"
+        android:id="@+id/addOrb3"
+        android:background="#00000000"
+        android:elevation="0dp"
+        android:scaleType="centerInside"
+        android:scaleX="0.48"
+        android:scaleY="0.48"
+        android:layout_below="@+id/usuario3"
+        android:layout_alignStart="@+id/addOrb1"
+        android:layout_marginTop="70dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/add_enemies"
+        android:id="@+id/addEnem1"
+        android:background="#00000000"
+        android:elevation="0dp"
+        android:scaleType="centerInside"
+        android:scaleX="0.48"
+        android:scaleY="0.48"
+        android:layout_alignTop="@+id/addOrb2"
+        android:layout_alignStart="@+id/addEnem2" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/add_enemies"
+        android:id="@+id/addEnem2"
+        android:background="#00000000"
+        android:elevation="0dp"
+        android:scaleType="centerInside"
+        android:scaleX="0.48"
+        android:scaleY="0.48"
+        android:layout_marginEnd="16dp"
+        android:layout_alignTop="@+id/addOrb1"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/add_enemies"
+        android:id="@+id/addEnem3"
+        android:background="#00000000"
+        android:elevation="0dp"
+        android:scaleType="centerInside"
+        android:scaleX="0.48"
+        android:scaleY="0.48"
+        android:layout_alignStart="@+id/addEnem2"
+        android:layout_alignTop="@+id/addOrb3" />
+
+</RelativeLayout>
