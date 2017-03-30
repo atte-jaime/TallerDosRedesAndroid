@@ -44,14 +44,13 @@ public class Comunicacion extends Observable implements Runnable {
         return ref;
     }
 
-    public void enviar(final Object info, String ipAdrs) throws IOException {
+    public void enviar(final Object info) throws IOException {
         new Thread(new Runnable() {
             @Override
             public void run() {
-
+                byte[] data = serialize(info);
+                InetAddress host = null;
                 try {
-                    byte[] data = serialize(info);
-                    InetAddress host = null;
                     host = InetAddress.getByName(en301Wifi);
                     DatagramPacket dPacket = new DatagramPacket(data, data.length, host, PORT);
                     s.send(dPacket);

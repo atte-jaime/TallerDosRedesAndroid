@@ -29,7 +29,8 @@
         android:layout_marginStart="28dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:background="#00000000" />
 
     <ImageView
         app:srcCompat="@drawable/usuario_dos_conec"
@@ -114,20 +115,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/add_enemies"
-        android:id="@+id/addEnem1"
+        android:id="@+id/addEnem2"
         android:background="#00000000"
         android:elevation="0dp"
         android:scaleType="centerInside"
         android:scaleX="0.48"
         android:scaleY="0.48"
         android:layout_alignTop="@+id/addOrb2"
-        android:layout_alignStart="@+id/addEnem2" />
+        android:layout_alignStart="@+id/addEnem1" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/add_enemies"
-        android:id="@+id/addEnem2"
+        android:id="@+id/addEnem1"
         android:background="#00000000"
         android:elevation="0dp"
         android:scaleType="centerInside"
@@ -147,7 +148,7 @@
         android:scaleType="centerInside"
         android:scaleX="0.48"
         android:scaleY="0.48"
-        android:layout_alignStart="@+id/addEnem2"
+        android:layout_alignStart="@+id/addEnem1"
         android:layout_alignTop="@+id/addOrb3" />
 
 </RelativeLayout>

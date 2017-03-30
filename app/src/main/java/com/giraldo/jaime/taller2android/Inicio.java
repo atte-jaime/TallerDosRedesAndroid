@@ -35,8 +35,8 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener {
             Intent instrucciones = new Intent("com.giraldo.jaime.taller2android.Instrucciones");
             startActivity(instrucciones);
         } else if (v.getId() == iniciar.getId()) {
-            Intent instrucciones = new Intent("com.giraldo.jaime.taller2android.Interaccion");
-            startActivity(instrucciones);
+            Intent iniciar = new Intent("com.giraldo.jaime.taller2android.Interaccion");
+            startActivity(iniciar);
         }
     }
 }

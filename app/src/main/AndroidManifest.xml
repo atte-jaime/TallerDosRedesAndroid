@@ -18,6 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Instrucciones">
             <intent-filter>
                 <action android:name="com.giraldo.jaime.taller2android.Instrucciones" />
@@ -25,6 +26,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Interaccion">
             <intent-filter>
                 <action android:name="com.giraldo.jaime.taller2android.Interaccion" />
@@ -32,6 +34,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

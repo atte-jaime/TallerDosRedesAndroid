@@ -28,7 +28,7 @@ public class Instrucciones extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
 
         if (v.getId() ==  iniciar.getId()){
-            Intent instrucciones = new Intent("com.giraldo.jaime.taller2android.Instrucciones");
+            Intent instrucciones = new Intent("com.giraldo.jaime.taller2android.Interaccion");
             startActivity(instrucciones);
         }
     }
