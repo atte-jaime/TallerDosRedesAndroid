@@ -151,4 +151,39 @@
         android:layout_alignStart="@+id/addEnem1"
         android:layout_alignTop="@+id/addOrb3" />
 
+    <TextView
+        android:text="Sin conectar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/usuario1"
+        android:layout_toEndOf="@+id/usuario1"
+        android:layout_marginTop="15dp"
+        android:id="@+id/userName1"
+        android:textColor="#ffffff"
+        android:fontFamily="monospace"
+        android:textStyle="normal|italic" />
+
+    <TextView
+        android:text="Sin conectar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/usuario2"
+        android:layout_toEndOf="@+id/usuario1"
+        android:id="@+id/userName2"
+        android:fontFamily="monospace"
+        android:textColor="#ffffff"
+        android:textStyle="normal|italic" />
+
+    <TextView
+        android:text="Sin conectar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userName3"
+        android:fontFamily="monospace"
+        android:textColor="#ffffff"
+        android:textStyle="normal|italic"
+        android:layout_below="@+id/usuario1"
+        android:layout_toEndOf="@+id/usuario2"
+        android:layout_marginTop="28dp" />
+
 </RelativeLayout>

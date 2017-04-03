@@ -8,9 +8,15 @@ import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.MulticastSocket;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.util.Observable;
+
+import CommonAndroid.Anadir;
+import CommonAndroid.MensajeID;
+import CommonAndroid.Nombre;
+
 
 /**
  * Created by jaime on 29/03/2017.
@@ -21,19 +27,50 @@ public class Comunicacion extends Observable implements Runnable {
     private static Comunicacion ref;
     public static final int PORT = 6000;
     public static final String en301Wifi = "172.30.171.109";
-    private DatagramSocket s;
+    public static final String enCasa = "181.49.83.202";
+    private final String GROUP_ADDRESS = "225.5.6.7";
+    private MulticastSocket s;
+    private boolean life = true;
 
     private Comunicacion() {
+
         try {
-            s = new DatagramSocket();
-        } catch (SocketException e) {
+            s = new MulticastSocket(PORT);
+            InetAddress host = InetAddress.getByName(GROUP_ADDRESS);
+            s.joinGroup(host);
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
+
     }
 
     @Override
     public void run() {
+        while (life) {
+            if (s != null) {
+                try {
+                    if (!s.isClosed()) {
+                        DatagramPacket paquete = recibir();
+                        if (paquete != null) {
+                            if (deserialize(paquete.getData()) instanceof Nombre) {
+                                setChanged();
+                                notifyObservers((Nombre) deserialize(paquete.getData()));
+                                clearChanged();
+                            }
 
+                            if (deserialize(paquete.getData()) instanceof Anadir) {
+                                setChanged();
+                                notifyObservers((Anadir) deserialize(paquete.getData()));
+                                clearChanged();
+                            }
+                        }
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     public static Comunicacion getInstancia() {
@@ -51,7 +88,7 @@ public class Comunicacion extends Observable implements Runnable {
                 byte[] data = serialize(info);
                 InetAddress host = null;
                 try {
-                    host = InetAddress.getByName(en301Wifi);
+                    host = InetAddress.getByName(enCasa);
                     DatagramPacket dPacket = new DatagramPacket(data, data.length, host, PORT);
                     s.send(dPacket);
 
